@@ -1,0 +1,67 @@
+﻿@model Order
+    <!--form is bound to Order - use tag helpers indicating what property each of the HTML inputs belong to - using the asp-for; these are all the POST Checkout() action on the controller -->
+
+    <form asp-action="Checkout" method="post" class="form-horizontal" role="form">
+        <h4 class="category-title">Complete Your Order</h4>
+
+        <!-- <div asp-validation-summary="All" class="danger"></div>-->
+
+        <div class="form-group">
+            <label asp-for="FirstName" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="danger"></span>
+            </div>
+        </div> <!--model binding - to properties in Order-->
+
+        <div class="form-group">
+            <label asp-for="LastName" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Address" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="City" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="County" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="County" class="form-control" />
+                <span asp-validation-for="County" class="danger"></span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PostCode" class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input asp-for="PostCode" class="form-control" />
+                <span asp-validation-for="PostCode" class="danger"></span>
+            </div>
+        </div>
+
+        <!--<div class="form-group">
+        <p>Total: &pound;@ViewBag.ShoppingCartTotal</p>
+    </div>-->
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-5">
+                
+                <input type="submit" class="btn btn-info" value="Complete Order" />
+            </div>
+        </div>
+    </form>

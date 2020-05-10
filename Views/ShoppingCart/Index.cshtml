@@ -1,0 +1,37 @@
+﻿@model ShoppingCartViewModel
+
+<h2 class="shopping-cart-heading">Your Basket</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>Quantity</th>
+            <th>Textbook</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.ShoppingCart.shoppingCartItems)
+        {
+        <tr>
+            <td class="text-left"><a style="color:#17a2b8 !important" asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-textbookId="@item.Textbook.Id">Decrease amount</a></td>
+            <td class="text-center">@item.Quantity</td>
+            <td class="text-left">@item.Textbook.Title</td>
+            <td class="text-right">&pound;@item.Textbook.Price</td>
+            <td class="text-right">
+                &pound;@(item.Quantity * item.Textbook.Price)
+            </td>
+        </tr>
+        }
+    </tbody>
+    <tfoot>
+        <td colspan="4" class="text-right">Total</td>
+        <td class="text-right">&pound;@Model.ShoppingCartTotal</td>
+    </tfoot>
+</table>
+
+<div class="text-center">
+    
+    <a class="btn btn-info" asp-controller="Order" asp-action="Checkout">Checkout</a>
+</div>

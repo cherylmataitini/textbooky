@@ -1,0 +1,15 @@
+﻿@model TextBookListViewModel
+
+<body>
+
+        <h3 class="category-title">@Model.CurrentCategory</h3>
+        <div class="container-fluid">
+        <br />
+        <!--display all of the textbooks-->
+        @foreach (var textbook in Model.Textbooks) 
+        {
+            <partial name="_TextBookCard" model="textbook" />
+        }
+    </div>
+    
+</body>

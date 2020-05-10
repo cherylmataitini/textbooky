@@ -1,0 +1,16 @@
+﻿@model TextBook
+
+<div class="row textbook-section">
+    <div class="details-img-container">
+    <img class="details-img" alt="@Model.Title" src="@Model.ImageUrl" />
+    </div>
+    <div class="col-md textbook-description">
+        <h1>@Model.Title</h1>
+       <!-- <h3><a href="#">@Model.Title</a></h3>-->
+        <p>ISBN: @Model.ISBN</p> 
+        <h3>@Model.Price</h3>
+        <p>@Model.Description</p>
+        <a class="btn btn-info" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-textbookId="@Model.Id">Add to Basket</a>
+    </div>
+</div>
+

@@ -1,0 +1,14 @@
+﻿@model TextBook
+
+<div class="row textbook-section">
+    <div class="col-sm">
+        <h2>@Model.Title</h2>
+        <p>@Model.Category.CategoryName</p>
+        <img class="textbook-img img-fluid" src="@Model.ImageUrl" alt="Textbook imaage" /> <!--use from folder later-->
+    </div>
+    <div class="col-md textbook-description">
+        <h4>&pound;@Model.Price</h4>
+        <p>@Model.Description</p>
+        <a class="btn btn-info more-btn" asp-controller="TextBook" asp-action="Details" asp-route-id="@Model.Id">More...</a>
+    </div>
+</div>

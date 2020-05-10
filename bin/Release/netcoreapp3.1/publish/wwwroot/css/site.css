@@ -1,0 +1,197 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+    color: #0366d6;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    min-height: 100% !important;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px; /* Vertically center the text there */
+}
+
+.btn {
+    padding: 5px 10px !important;
+}
+
+.category-title {
+    color: #17a2b8 !important;
+    padding: 15px 0px;
+    border-bottom: 2px solid #17a2b8;
+}
+
+.navbar-grey, .footer {
+    background-color: #353538 !important;
+}
+
+.nav-link {
+    padding-right: 0.8rem !important;
+    padding-left: 0.8rem !important;
+}
+
+.navbar-brand, .nav-link, .footer {
+    color: #e4e4e4 !important;
+}
+
+.nav-hover:hover {
+    color: #17a2b8 !important;
+}
+
+.col-sm {
+    flex-grow: 0.6 !important;
+}
+
+.textbook-section {
+    margin: 3rem auto;
+    background-color: #eef4f7;
+    padding: 20px 20px;
+    border-radius: 10px;
+    background: linear-gradient(to right bottom, #f3f7f9 50%, #e8eff3 50%)
+}
+
+.textbook-description {
+    padding: 5% 1.5rem;
+}
+
+.textbook-img {
+    max-width: 260px;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1), 0 0 0 2px rgb(255,255,255), 0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.details-img-container {
+    display: flex;
+    align-items: center;
+}
+
+.details-img {
+    min-width: 380px;
+    max-width: 400px;
+    box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1), 0 0 0 2px rgb(255,255,255), 0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+
+.more-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.carousel-item {
+    width: 20rem;
+    display: flex;
+}
+
+    .carousel-item img {
+        margin: auto;
+    }
+
+.index-books-stack {
+    max-width: 20rem;
+    transform: translateX(7%);
+}
+
+.center-text {
+    text-align: center;
+}
+
+.shopping-cart-heading {
+    padding: 15px 0px;
+    color: #17a2b8;
+}
+
+.shopping-cart-summary {
+    color: #e4e4e4 !important;
+}
+
+.categories-menu {
+    background-color: #353538 !important;
+    text-align: left;
+}
+
+.field-validation-error {
+    color: red;
+}
+
+
+@media screen and (max-width: 768px) {
+    .col-sm {
+        margin-bottom: 10px !important;
+        position: relative;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 7px;
+    }
+
+    .details-img {
+        min-width: 300px;
+        max-width: 340px;
+    }
+
+    .index-books-stack {
+        transform: none;
+    }
+}

@@ -1,0 +1,19 @@
+﻿
+<h4 class="category-title">Pay Now</h4>
+<br />
+
+<h4>Total amount to pay: &pound;@ViewBag.shoppingCartTotal</h4>
+<a runat="server" id="pay-now" class="btn btn-info" style="color: white; cursor:pointer" ClientIDMode="Static">Pay Now</a>
+<script src="https://js.stripe.com/v2/"></script>
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    var stripe = Stripe('@ViewBag.stripePublishableKey');
+    var payBtn = document.getElementById('pay-now');
+
+    payBtn.addEventListener('click', function () {
+        stripe.redirectToCheckout({
+            sessionId: '@ViewBag.sessionId'
+        });
+    });
+</script>
+
